@@ -2,7 +2,8 @@ tutorial
 1 tao bot va gen key: https://anchoimiennam.slack.com/apps/A0F7YS25R-bots
 1.1 add bot vao chenal
 2 tao file index.js
-3 copy code vao index.js
+2.1 lấy token từ con bot vừa tạo https://anchoimiennam.slack.com/services/A0F7YS25R?added=1
+3 copy code bên dưới vao index.js
 -------------------------------------------------------
 var RtmClient = require('@slack/client').RtmClient;
 var RTM_EVENTS = require('@slack/client').RTM_EVENTS;
@@ -38,43 +39,3 @@ rtm.on(RTM_EVENTS.REACTION_REMOVED, function handleRtmReactionRemoved(reaction) 
 --------------------------------------------------------------------------------------------------------
 4 chay lenh : node index.js
 5 co server nodejs thi build lên
-
-https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction
-heroku git:pull -a slack-botchat
-1. Prepare the app
-git clone https://git.heroku.com/slack-botchat.git
-2. Deploy the app
-heroku ps:scale web=1
-3. Scale the app
-heroku ps
-heroku ps:scale web=0
-heroku ps:scale web=1
-4. Run the app locally
-heroku local web
-5. Push local changes
-git add .
-git commit -m "Demo"
-git push heroku master
-heroku open
-6. View logs
-heroku logs --tail
-
-
-
-
-get images link from voz
-var js = document.createElement('script');
-		js.type = 'text/javascript';
-		js.async = true;
-		js.src = 'https://code.jquery.com/jquery-3.2.1.min.js';
-		document.body.appendChild(js);
-
-    var list = $('.voz-post-message img:not(.inlineimg)')
-
-    var arrList = [];
-    [].forEach.call(list, function(item){
-      if(item.src && item.src.indexOf('voz') == -1){
-        arrList.push(item.src);
-      }
-    })
-    JSON.stringify(arrList)
